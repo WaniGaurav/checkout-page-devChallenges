@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fs-title:2.25rem;
+    --fs-checkout-details:1.125rem;
+    --fs-label-txt:0.75rem;
+
+    --padding-label-txt:0.436rem;
+    --padding-bottom-title:3.184rem;
+    --padding-bottom-checkout-details:0.934rem;
+    --padding-left-info-wrapper:0.875rem;
+}
+
+@media (width <1000px){
+    :root {
+        --fs-title:1.5rem;
+        --fs-checkout-details:0.875rem;
+        --fs-label-txt:0.625rem;
+
+        --padding-label-txt:0.327rem;
+        --padding-bottom-title:3.226rem;
+        --padding-bottom-checkout-details:0.699rem;
+        --padding-left-info-wrapper:0.734rem;
+    }
+}
+
+.container{
+    width: min(100% , 1440px);
+    /* height: min(100% , 1140px); */
+    height: 1140px;
+    display: flex;
+    margin: auto;
+    border: 2px solid brown;
+}
+.left{
+    width: 50%;
+    border: 2px solid blueviolet;
+}
+.title{
+    font-family: Montserrat;
+    font-size: var(--fs-title);
+    font-weight: 600;
+    letter-spacing: 0em;
+    padding-bottom: var(--padding-bottom-title);
+}
+.checkout-details{
+    font-family: Montserrat;
+    font-size: var(--fs-checkout-details);
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    padding-bottom: var(--padding-bottom-checkout-details);
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+    width: 465px;
+    height: 77.98332214355469px;
+}
+.info-wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 465px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #828282;
+    padding-left: var(--padding-left-info-wrapper);
+}
+.input-details-info{
+   border-style: none;
+   font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.info-wrapper span{
+    margin-right: 1rem;
+}
+.symbol-design{
+    color: #828282;
+}
+.label-txt{
+    font-family: Montserrat;
+    font-size: var(--fs-label-txt);
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    color: #4F4F4F;
+    padding-bottom: var(--padding-label-txt);
+}
