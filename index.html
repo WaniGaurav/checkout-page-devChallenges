@@ -13,19 +13,18 @@
         <div class="left">
             <p class="title">Checkout</p>
             <div class="contact-info">
-                <div class="">
+                <div id="userInfo" class="user-information">
                     <p class="checkout-details">Contact infomation</p>
-                    <!-- <div id="userInfo" class="user-info">
-                        <label class="label-txt">E-mail</label>
-                        <div class="info-wrapper">
-                            <span class="material-symbols-outlined symbol-design">email</span>
-                            <input type="email" class="input-details-info" placeholder="Enter your email...">
-                        </div>
-                    </div> -->
                 </div>
-                <div class="">
+                <div id="shippingAddrs" class="user-products">
                     <p class="checkout-details"><br>Shipping address</p>
-                    <div id="shippingAddrs" class="shipping-addrs"></div>
+                    <!-- <div class="shipping-addrs"></div> -->
+                </div>
+                <div class="chkbox-wrapper">
+                    <input type="checkbox" id="checkbox1" class="chkbox">
+                    <label for="checkbox1">
+                        <span class="chk-txt">Save this information for next time</span>
+                    </label> 
                 </div>
             </div>
         </div>
@@ -36,3 +35,10 @@
     <script src="./components/contents.js"></script>
 </body>
 </html>
+        <!-- <div class="user-info">
+            <label class="label-txt">E-mail</label>
+            <div class="info-wrapper">
+                <span class="material-symbols-outlined symbol-design">email</span>
+                <input type="email" class="input-details-info" placeholder="Enter your email...">
+            </div>
+        </div> -->
