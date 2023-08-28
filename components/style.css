@@ -15,8 +15,9 @@
     --padding-left-info-wrapper:0.875rem;
     --padding-top-user-info2:1.251rem;
     --padding-top-user-info3:0.814rem;
-    --padding-top-user-info4:0.813rem;
-    --padding-top-user-info5:0.813rem;
+    --padding-top-divContainer-user-info1:0.813rem;
+    --padding-top-divContainer-user-info2:0.813rem;
+    --padding-right-divContainer-user-info1:1.938rem;
     --padding-top-chkbox-wrapper:1.249rem;
     
     --margin-right-chkbox:0.688rem;
@@ -45,8 +46,9 @@
         --padding-left-info-wrapper:0.734rem;
         --padding-top-user-info2:1.033rem;
         --padding-top-user-info3:0.704rem;
-        --padding-top-user-info4:0.703rem;
-        --padding-top-user-info5:0.701rem;
+        --padding-top-divContainer-user-info1:0.703rem;
+        --padding-top-divContainer-user-info2:0.701rem;
+        --padding-right-divContainer-user-info1:1.455rem;
         --padding-top-chkbox-wrapper:1.081rem;
         
         --margin-right-chkbox:0.486rem;
@@ -104,17 +106,18 @@
 .user-info3{
     padding-top: var(--padding-top-user-info3);
 }
-.user-info4{
-    padding-top: var(--padding-top-user-info4);
+.divContainer-user-info1{
+    padding-top: var(--padding-top-divContainer-user-info1);
+    padding-right: var(--padding-right-divContainer-user-info1);
 }
-.user-info5{
-    padding-top: var(--padding-top-user-info5);
+.divContainer-user-info2{
+    padding-top: var(--padding-top-divContainer-user-info2);
 }
-.user-info4,
-.user-info5{
+.divContainer-user-info1,
+.divContainer-user-info2{
     width: var(--user-info4-info5-width);
     height: var(--user-info4-info5-height);
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .info-wrapper{
@@ -137,13 +140,21 @@
     height: var(--info-wrapper-half-width-height);
 }
 
-.input-details-info-half-width4{
+.input-details-info-half-width1{
     width: var(--input-details-info-half-width-width);    
     height: var(--input-details-info-half-width-height);
 }
-.input-details-info-half-width5{
+.input-details-info-half-width2{
     width: var(--input-details-info-half-width5-width);    
     height: var(--input-details-info-half-width5-height);
+}
+
+input{
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
 }
 
 .input-details-info{
@@ -170,6 +181,12 @@
     letter-spacing: 0em;
     color: #4F4F4F;
     padding-bottom: var(--padding-label-txt);
+}
+
+.divContainer{
+    display: flex;
+    align-items: center;
+    width: 31rem;
 }
 
 .chkbox-wrapper{
