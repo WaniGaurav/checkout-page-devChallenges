@@ -140,13 +140,33 @@
     height: var(--info-wrapper-half-width-height);
 }
 
-.input-details-info-half-width1{
+/* .input-details-info-half-width1{
     width: var(--input-details-info-half-width-width);    
     height: var(--input-details-info-half-width-height);
-}
-.input-details-info-half-width2{
+} */
+/* .input-details-info-half-width2{
     width: var(--input-details-info-half-width5-width);    
     height: var(--input-details-info-half-width5-height);
+} */
+.input-details-info-half-width{
+    width: var(--input-details-info-half-width5-width);    
+    height: var(--input-details-info-half-width5-height);
+}
+/* select{
+    outline: none;
+} */
+.countryClass{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #828282;
+}
+.countryClass:focus,
+.countryClass:hover{
+    outline: none;
 }
 
 input{
