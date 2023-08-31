@@ -7,6 +7,8 @@
     --fs-title:2.25rem;
     --fs-checkout-details:1.125rem;
     --fs-label-txt:0.75rem;
+    --fs-countryClass:1rem;
+    --fs-input-details-info:1rem;
 
     --padding-label-txt:0.436rem;
     --padding-bottom-title:3.184rem;
@@ -21,15 +23,26 @@
     --padding-top-chkbox-wrapper:1.249rem;
     
     --margin-right-chkbox:0.688rem;
+    --margin-symbol-design-kybrd-down-arrow-left:1.063rem;
 
+    --user-info-width:29.063rem;
+    --user-info-height:4.874rem;
     --user-info4-info5-width:13.563rem;
     --user-info4-info5-height:4.876rem;
+    --info-wrapper-width:29.063rem;
+    --info-wrapper-height:3.5rem;
     --info-wrapper-half-width-width:13.563rem;
     --info-wrapper-half-width-height:3.5rem;
     --input-details-info-half-width-width:7.125rem;
     --input-details-info-half-width-height:1.25rem;
     --input-details-info-half-width5-width:9.125rem;
     --input-details-info-half-width5-height:1.25rem;
+    --symbol-design-kybrd-down-arrow-left-width:1.5rem;
+    --symbol-design-kybrd-down-arrow-left-height:1.5rem;
+    --countryClass-width:7.125rem;
+    --countryClass-height:1.25rem;
+    --input-details-info-width:9.75rem;
+    --input-details-info-height:1.25rem;
 
 }
 
@@ -38,6 +51,8 @@
         --fs-title:1.5rem;
         --fs-checkout-details:0.875rem;
         --fs-label-txt:0.625rem;
+        --fs-countryClass:0.75rem;
+        --fs-input-details-info:0.75rem;
 
         --padding-label-txt:0.327rem;
         --padding-bottom-title:3.226rem;
@@ -52,15 +67,26 @@
         --padding-top-chkbox-wrapper:1.081rem;
         
         --margin-right-chkbox:0.486rem;
+        --margin-symbol-design-kybrd-down-arrow-left:0.833rem;
 
+        --user-info-width:21.828rem;
+        --user-info-height:3.569rem;
         --user-info4-info5-width:10.186rem;
         --user-info4-info5-height:3.569rem;
+        --info-wrapper-width:21.828rem;
+        --info-wrapper-height:2.535rem;
         --info-wrapper-half-width-width:10.186rem;
         --info-wrapper-half-width-height:2.535rem;
         --input-details-info-half-width-width:5.351rem;
         --input-details-info-half-width-height:0.939rem;
         --input-details-info-half-width5-width:6.854rem;
         --input-details-info-half-width5-height:0.939rem;
+        --symbol-design-kybrd-down-arrow-left-width:0.938rem;
+        --symbol-design-kybrd-down-arrow-left-height:0.938rem;
+        --countryClass-width:5.351rem;
+        --countryClass-height:0.939rem;
+        --input-details-info-width:7.323rem;
+        --input-details-info-height:0.939rem;
 
     }
 }
@@ -96,8 +122,8 @@
 .user-info{
     display: flex;
     flex-direction: column;
-    width: 465px;
-    height: 77.98332214355469px;
+    width: var(--user-info-width);
+    height: var(--user-info-height);
 }
 
 .user-info2{
@@ -124,8 +150,8 @@
     display: flex;
     /* flex-direction: column; */
     align-items: center;
-    width: 465px;
-    height: 56px;
+    width: var(--info-wrapper-width);
+    height: var(--info-wrapper-height);
     border-radius: 12px;
     border: 1px solid #828282;
     padding-left: var(--padding-left-info-wrapper);
@@ -152,12 +178,16 @@
     width: var(--input-details-info-half-width5-width);    
     height: var(--input-details-info-half-width5-height);
 }
-/* select{
+select{
     outline: none;
-} */
+    border: 0;
+    appearance: none;
+}
 .countryClass{
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: var(--fs-countryClass);
+    width: var(--countryClass-width);
+    height: var(--countryClass-height);
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
@@ -178,9 +208,11 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 
 .input-details-info{
-   border-style: none;
-   font-family: Montserrat;
-    font-size: 16px;
+    border-style: none;
+    font-family: Montserrat;
+    font-size: var(--fs-input-details-info);
+    width: var(--input-details-info-width);
+    height: var(--input-details-info-height);
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
@@ -192,6 +224,13 @@ input[type="number"]::-webkit-inner-spin-button{
 
 .symbol-design{
     color: #828282;
+}
+.symbol-design-kybrd-down-arrow{
+    margin-left: var(--margin-symbol-design-kybrd-down-arrow-left);
+    width: var(--symbol-design-kybrd-down-arrow-left-width);
+    height: var(--symbol-design-kybrd-down-arrow-left-height);
+    border-radius: 4px;
+    background-color: #E0E0E0;
 }
 .label-txt{
     font-family: Montserrat;
@@ -228,4 +267,27 @@ input[type="number"]::-webkit-inner-spin-button{
     line-height: 15px;
     letter-spacing: 0em;
     color:#4F4F4F;
+}
+.btn-yellow{
+    display: flex;
+    justify-content: flex-end;
+    /* width: var(--user-info-width); */
+    width: 30rem;
+    padding-top: 23px;
+    border: 2px solid red;
+}
+.btn-txt{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #ffffff;
+}
+.btn-yellow button{
+    width: 166px;
+    height: 54px;
+    border-radius: 12px;
+    background-color: #F2994A;
+    border: 0;
 }

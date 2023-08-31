@@ -123,6 +123,13 @@ let ids2 = "shippingAddrs";
                                             countrySpan.appendChild(optionTag);
                                         }
                                         divTag.appendChild(countrySpan)
+                                        // span tag start
+                                            let spanTag = document.createElement("span");
+                                            spanTag.className = "material-symbols-outlined";
+                                            spanTag.innerHTML = "keyboard_arrow_down";
+                                            spanTag.classList.add("symbol-design","symbol-design-kybrd-down-arrow");
+                                            divTag.appendChild(spanTag)
+                                        // span tag end
 
                                     }else{
 
@@ -138,7 +145,7 @@ let ids2 = "shippingAddrs";
 
                                         divTag.appendChild(inputTag);
                                         // input tag end
-                                        inputTag.classList.add(`input-details-info-half-width$`);
+                                        inputTag.classList.add(`input-details-info-half-width`);
                                     }
                                     
                                     // divTag.classList.add("info-wrapper-half-width")
