@@ -9,6 +9,8 @@
     --fs-label-txt:0.75rem;
     --fs-countryClass:1rem;
     --fs-input-details-info:1rem;
+    --fs-btn-txt:1rem;
+    --fs-symbol-design-kybrd-down-arrow:1.5rem;
 
     --padding-label-txt:0.436rem;
     --padding-bottom-title:3.184rem;
@@ -37,12 +39,15 @@
     --input-details-info-half-width-height:1.25rem;
     --input-details-info-half-width5-width:9.125rem;
     --input-details-info-half-width5-height:1.25rem;
-    --symbol-design-kybrd-down-arrow-left-width:1.5rem;
-    --symbol-design-kybrd-down-arrow-left-height:1.5rem;
+    --symbol-design-kybrd-down-arrow-left-width:1.313rem;
+    --symbol-design-kybrd-down-arrow-left-height:1.313rem;
     --countryClass-width:7.125rem;
     --countryClass-height:1.25rem;
     --input-details-info-width:9.75rem;
     --input-details-info-height:1.25rem;
+    --btn-yellow-width:10.375rem;
+    --btn-yellow-height:3.375rem;
+    --btn-yellow-div-width:30rem;
 
 }
 
@@ -53,6 +58,7 @@
         --fs-label-txt:0.625rem;
         --fs-countryClass:0.75rem;
         --fs-input-details-info:0.75rem;
+        --fs-symbol-design-kybrd-down-arrow:1rem;
 
         --padding-label-txt:0.327rem;
         --padding-bottom-title:3.226rem;
@@ -87,6 +93,7 @@
         --countryClass-height:0.939rem;
         --input-details-info-width:7.323rem;
         --input-details-info-height:0.939rem;
+        --btn-yellow-div-width:22.5rem;
 
     }
 }
@@ -226,9 +233,13 @@ input[type="number"]::-webkit-inner-spin-button{
     color: #828282;
 }
 .symbol-design-kybrd-down-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: var(--margin-symbol-design-kybrd-down-arrow-left);
     width: var(--symbol-design-kybrd-down-arrow-left-width);
     height: var(--symbol-design-kybrd-down-arrow-left-height);
+    font-size: var(--fs-symbol-design-kybrd-down-arrow);
     border-radius: 4px;
     background-color: #E0E0E0;
 }
@@ -268,26 +279,36 @@ input[type="number"]::-webkit-inner-spin-button{
     letter-spacing: 0em;
     color:#4F4F4F;
 }
-.btn-yellow{
+.btn-yellow-div{
     display: flex;
     justify-content: flex-end;
-    /* width: var(--user-info-width); */
-    width: 30rem;
+    width: var(--btn-yellow-div-width);
     padding-top: 23px;
-    border: 2px solid red;
+    
 }
 .btn-txt{
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: var(--fs-btn-txt);
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
     color: #ffffff;
 }
-.btn-yellow button{
-    width: 166px;
-    height: 54px;
+.btn-yellow-div button{
+    width: var(--btn-yellow-width);
+    height: var(--btn-yellow-height);
     border-radius: 12px;
     background-color: #F2994A;
     border: 0;
+}
+
+        /* right */
+
+.cart-grid{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    border: 2px solid red;
+}
+.price{
+    color: #F2994A;
 }
