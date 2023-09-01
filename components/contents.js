@@ -173,5 +173,36 @@ userInfoCreate(ids2, reqFields2 ,reqFields2type, placeholders2, symbols2);
 userInfoPostalAddrs(ids2, reqFields3 ,reqFields3type, placeholders3, symbols3, option3);
 
 
+let shoppingCart = (productName) => {
+    let mainDiv = document.getElementById("cart")
+
+    for (let index = 0; index < productName.length; index++) {
+        
+        let innerDiv = document.createElement("div");
+        innerDiv.className="cart-grid";
+
+        // img tag start
+        let imgTag = document.createElement("img")
+        imgTag.className="cartImage";
+        imgTag.alt=`Product ${index+1}`
+        imgTag.src=`./images/photo${index+1}.png`
+        innerDiv.appendChild(imgTag)
+        // img tag end
+
+        let priceDiv = document.createElement("div")
+        priceDiv.className="price"
+
+            let  productNameDiv = document.createElement("div")
+            productNameDiv.className="product-name-div"
+
+                let spanTag1 = document.createElement("span")
+                spanTag1.className = "product-name"
+                spanTag1.innerHTML = productName[index];
+                productNameDiv.appendChild(spanTag1)
+            priceDiv.appendChild(productNameDiv)
+
+            
+    }
+}
 
 

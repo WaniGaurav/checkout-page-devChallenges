@@ -106,6 +106,11 @@
     margin: auto;
     border: 2px solid brown;
 }
+.flexClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .left{
     width: 50%;
     border: 2px solid blueviolet;
@@ -307,8 +312,78 @@ input[type="number"]::-webkit-inner-spin-button{
 .cart-grid{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
+    gap: 1.325rem;
     border: 2px solid red;
 }
-.price{
+.cartImge{
+    justify-self: end;
+    width: 134.20564316218895px;
+    height: 136.27360581579214px;
+    border-radius: 13px;
+    color: #c4c4c4;
+}
+.product-name{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4E5150;
+}
+.price-actual{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
     color: #F2994A;
+}
+.price-strikethrough{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4E5150;
+    text-decoration: line-through;
+}
+.qantity{
+    margin-top: 24.2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 134.25401306152344px;
+    height: 52px;
+    border: 1px solid #828282;
+    border-radius: 12px;
+}
+.product-name-div{
+    width: 162.51802118933986px;
+    height: 22.207431869660436px;
+    /* angle: 0.02 deg; */
+}
+.price-amount-div{
+    padding-top: 6px;
+    width: 9rem;
+    height: 29.273431878725866px;
+    rotate: 0.02 deg;
+
+}
+.symbol-background{
+    width: 21.197999954223633px;
+    height: 21.197999954223633px;
+    border-radius: 4px;
+    background-color: #E0E0E0;
+}
+.qantity-number{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
 }
