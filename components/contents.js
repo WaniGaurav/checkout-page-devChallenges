@@ -173,13 +173,14 @@ userInfoCreate(ids2, reqFields2 ,reqFields2type, placeholders2, symbols2);
 userInfoPostalAddrs(ids2, reqFields3 ,reqFields3type, placeholders3, symbols3, option3);
 
 
-let shoppingCart = (productName) => {
+let shoppingCart = (productName, actualPrice, oldPrice, quantityArray, chargesDesc, actualCharges) => {
     let mainDiv = document.getElementById("cart")
+
+    let innerDiv = document.createElement("div");
+    innerDiv.className="cart-grid";
 
     for (let index = 0; index < productName.length; index++) {
         
-        let innerDiv = document.createElement("div");
-        innerDiv.className="cart-grid";
 
         // img tag start
         let imgTag = document.createElement("img")
@@ -192,8 +193,8 @@ let shoppingCart = (productName) => {
         let priceDiv = document.createElement("div")
         priceDiv.className="price"
 
-            let  productNameDiv = document.createElement("div")
-            productNameDiv.className="product-name-div"
+                let  productNameDiv = document.createElement("div")
+                productNameDiv.className="product-name-div"
 
                 let spanTag1 = document.createElement("span")
                 spanTag1.className = "product-name"
@@ -201,8 +202,77 @@ let shoppingCart = (productName) => {
                 productNameDiv.appendChild(spanTag1)
             priceDiv.appendChild(productNameDiv)
 
-            
+                let priceAmountDiv = document.createElement("div")
+                priceAmountDiv.className = "price-amount-div"
+
+                let priceSpanTag1 = document.createElement("span");
+                priceSpanTag1.className = "price-actual"
+                priceSpanTag1.innerHTML = actualPrice[index]
+                priceAmountDiv.appendChild(priceSpanTag1)
+                
+                let priceSpanTag2 = document.createElement("span");
+                priceSpanTag2.className = "price-strikethrough"
+                priceSpanTag2.innerHTML = oldPrice[index]
+                priceAmountDiv.appendChild(priceSpanTag2)
+            priceDiv.appendChild(priceAmountDiv)    
+
+                let quantityDiv = document.createElement("div")
+                quantityDiv.className = "qantity"
+
+                    // let quantitySpanTag;
+                    for (let index = 0; index < 3; index++) {
+                    
+                        let quantitySpanTag = document.createElement("span");
+                        
+                        if (index == 1) {
+                            quantitySpanTag.classList.add( "qantity-number", "symbol-design");
+                        }else{
+                            quantitySpanTag.classList.add( "material-symbols-outlined", "flexClass", "symbol-design", "symbol-background");
+                        }
+                        quantitySpanTag.innerHTML = quantityArray[index]
+                        
+                        quantityDiv.appendChild(quantitySpanTag)
+                    
+                    }
+            priceDiv.appendChild(quantityDiv)
+        innerDiv.appendChild(priceDiv)
+
     }
+    mainDiv.appendChild(innerDiv)
+
+    let innerDiv2 = document.createElement("div")
+    innerDiv2.className = "charges"
+
+    for (let index = 0; index < 2; index++) {
+
+            let hrTag = document.createElement("hr")
+            hrTag.className = "hr-line"
+            innerDiv2.appendChild(hrTag)
+
+        let chargesContentDiv = document.createElement("div")
+        chargesContentDiv.className = "charges-content"
+
+            let spanTag = document.createElement("span")
+            spanTag.className = "charges-desc"
+            spanTag.innerHTML = chargesDesc[index]
+            chargesContentDiv.appendChild(spanTag)
+            
+            let spanTag1 = document.createElement("span")
+            spanTag1.className = "actual-charges"
+            spanTag1.innerHTML = actualCharges[index]
+            chargesContentDiv.appendChild(spanTag1)
+        innerDiv2.appendChild(chargesContentDiv)
+    }
+    innerDiv.appendChild(innerDiv2)
 }
 
 
+let productNamevalues = ["Vintage Backbag", "Levi Shoes"];
+let actualPricevalues = ["$54.99","$74.99"];
+let oldPricevalues = ["$94.99", "$124.99"];
+let quantityArrayvalues = ["remove", "1", "add"];
+let chargesDesc = ["Shipping", "Total"];
+let actualCharges = ["$19", "$148.98"];
+
+
+shoppingCart(productNamevalues, actualPricevalues, oldPricevalues, quantityArrayvalues, chargesDesc, actualCharges)
