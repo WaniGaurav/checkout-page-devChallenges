@@ -11,6 +11,11 @@
     --fs-input-details-info:1rem;
     --fs-btn-txt:1rem;
     --fs-symbol-design-kybrd-down-arrow:1.5rem;
+    --fs-product-name:1rem;
+    --fs-price-actual:1rem;
+    --fs-price-strikethrough:0.75rem;
+    --fs-charges-desc:1.125rem;
+    --fs-chk-txt:0.75rem;
 
     --padding-label-txt:0.436rem;
     --padding-bottom-title:3.184rem;
@@ -27,12 +32,13 @@
     
     --margin-right-chkbox:0.688rem;
     --margin-symbol-design-kybrd-down-arrow-left:1.063rem;
+    --margin-top-qantity:1.513rem;
 
-    --user-info-width:29.063rem;
+    --user-info-width:31.063rem;
     --user-info-height:4.874rem;
-    --user-info4-info5-width:13.563rem;
+    --user-info4-info5-width:14.563rem;
     --user-info4-info5-height:4.876rem;
-    --info-wrapper-width:29.063rem;
+    --info-wrapper-width:30.063rem;
     --info-wrapper-height:3.5rem;
     --info-wrapper-half-width-width:13.563rem;
     --info-wrapper-half-width-height:3.5rem;
@@ -48,7 +54,16 @@
     --input-details-info-height:1.25rem;
     --btn-yellow-width:10.375rem;
     --btn-yellow-height:3.375rem;
-    --btn-yellow-div-width:30rem;
+    --btn-yellow-div-width:31rem;
+    --cartImage-width:8.388rem;
+    --cartImage-height:8.517rem;
+    --qantity-width:8.391rem;
+    --qantity-height:3.25rem;
+    --symbol-background-width:1.325rem;
+    --symbol-background-height:1.325rem;
+    --charges-width:18.438rem;
+    --chkbox-width:1.313rem;
+    --chkbox-height:1.313rem;
 
 }
 
@@ -60,6 +75,11 @@
         --fs-countryClass:0.75rem;
         --fs-input-details-info:0.75rem;
         --fs-symbol-design-kybrd-down-arrow:1rem;
+        --fs-product-name:0.75rem;
+        --fs-price-actual:0.875rem;
+        --fs-price-strikethrough:0.625rem;
+        --fs-charges-desc:0.875rem;
+        --fs-chk-txt:0.625rem;
 
         --padding-label-txt:0.327rem;
         --padding-bottom-title:3.226rem;
@@ -76,12 +96,13 @@
         
         --margin-right-chkbox:0.486rem;
         --margin-symbol-design-kybrd-down-arrow-left:0.833rem;
+        --margin-top-qantity:1.01rem;
 
-        --user-info-width:21.828rem;
+        --user-info-width:23.828rem;
         --user-info-height:3.569rem;
-        --user-info4-info5-width:10.186rem;
+        --user-info4-info5-width:11.186rem;
         --user-info4-info5-height:3.569rem;
-        --info-wrapper-width:21.828rem;
+        --info-wrapper-width:22.828rem;
         --info-wrapper-height:2.535rem;
         --info-wrapper-half-width-width:10.186rem;
         --info-wrapper-half-width-height:2.535rem;
@@ -95,7 +116,17 @@
         --countryClass-height:0.939rem;
         --input-details-info-width:7.323rem;
         --input-details-info-height:0.939rem;
-        --btn-yellow-div-width:22.5rem;
+        --btn-yellow-width:11.4rem;
+        --btn-yellow-div-width:23.5rem;
+        --cartImage-width:7.672rem;
+        --cartImage-height:7.79rem;
+        --qantity-width:7.675rem;
+        --qantity-height:3.116rem;
+        --symbol-background-width:1.212rem;
+        --symbol-background-height:1.212rem;
+        --charges-width:16.5rem;
+        --chkbox-width:1rem;
+        --chkbox-height:0.938rem;
 
     }
 }
@@ -103,6 +134,7 @@
 .container{
     /* height: min(100% , 1140px); */
     width: min(100% , 960px);
+    padding: 0 1rem;
     margin: auto;
     /* display: flex; */
 }
@@ -282,8 +314,8 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 .chkbox{
     margin-right: var(--margin-right-chkbox);
-    width: 21px;
-    height: 21px;
+    width: var(--chkbox-width);
+    height: var(--chkbox-height);
     border: 1px solid #828282;
     border-radius: 4px;
     cursor: pointer;
@@ -322,6 +354,7 @@ input[type="number"]::-webkit-inner-spin-button{
         /* right */
 
 .cart-grid{
+    padding-top: 1.916rem;
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     align-items: end;
@@ -334,14 +367,18 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 .cartImage{
     justify-self: end;
-    width: 134.20564316218895px;
-    height: 136.27360581579214px;
+    width: var(--cartImage-width);
+    height: var(--cartImage-height);
     border-radius: 13px;
     color: #c4c4c4;
 }
+.price{
+    /* width: var(--cartImage-width); */
+    height: var(--cartImage-height);
+}
 .product-name{
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: var(--fs-product-name);
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
@@ -349,8 +386,9 @@ input[type="number"]::-webkit-inner-spin-button{
     color: #4E5150;
 }
 .price-actual{
+    margin-right: 1rem;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: var(--fs-price-actual);
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;
@@ -359,40 +397,40 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 .price-strikethrough{
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: var(--fs-price-strikethrough);
     font-weight: 600;
-    line-height: 15px;
+    line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
     color: #4E5150;
     text-decoration: line-through;
 }
 .qantity{
-    margin-top: 24.2px;
+    margin-top: var(--margin-top-qantity);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 134.25401306152344px;
-    height: 52px;
+    width: var(--qantity-width);
+    height: var(--qantity-height);
     border: 1px solid #828282;
     border-radius: 12px;
 }
 .product-name-div{
-    width: 162.51802118933986px;
+    width: 160px;
     height: 22.207431869660436px;
     /* angle: 0.02 deg; */
 }
 .price-amount-div{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     padding-top: 6px;
     width: 7.3rem;
     height: 29.273431878725866px;
 
 }
 .symbol-background{
-    width: 21.197999954223633px;
-    height: 21.197999954223633px;
+    width: var(--symbol-background-width);
+    height: var(--symbol-background-heights);
     border-radius: 4px;
     background-color: #E0E0E0;
 }
@@ -408,7 +446,7 @@ input[type="number"]::-webkit-inner-spin-button{
 
 .charges{
     place-self: center;
-    width: 295px;
+    width: var(--charges-width);
     padding: 1.67rem;
     grid-column: 1 / span 2;
 }
@@ -423,7 +461,7 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 .charges-desc{
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: var(--fs-charges-desc);
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0em;
