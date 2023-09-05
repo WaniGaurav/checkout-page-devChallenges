@@ -1,6 +1,6 @@
 
 let reqFields1 = ["E-mail","Phone"];
-let reqFields1type = ["email", "tel"];
+let reqFields1type = ["email", "number"];
 let placeholders1 = ["Enter your email...", "Enter your phone..."];
 let symbols1 = ["email", "call"];
 
@@ -25,7 +25,7 @@ let ids2 = "shippingAddrs";
     
     userInfoCreate = (ids,reqFields, inputType, placeholders, symbols) => {
             
-            let divId = document.getElementById(`${ids}`);
+        let divId = document.getElementById(`${ids}`);
     
         for (let index = 0; index < reqFields.length; index++) {
     
@@ -55,6 +55,7 @@ let ids2 = "shippingAddrs";
                         inputTag.type = inputType[index];
                         inputTag.className = "input-details-info";
                         inputTag.placeholder = placeholders[index];
+                        inputTag.required = true;
     
                         if (symbols[index] === "account_circle") {
                             console.log(symbols[index])
@@ -70,9 +71,7 @@ let ids2 = "shippingAddrs";
                 
                 divId.appendChild(outerDivtag);
             
-            
-            // divId.appendChild(outerDivtag);
-    
+                
         }
     }
 
@@ -114,7 +113,6 @@ let ids2 = "shippingAddrs";
                                         let countrySpan = document.createElement("select")
                                         countrySpan.name = "countries";
                                         countrySpan.id = "select-country";
-                                        // countrySpan.className = `input-details-info-half-width${index}`;
                                         countrySpan.className = "countryClass";
 
                                         for (let index = 0; index < options.length; index++) {
@@ -142,15 +140,13 @@ let ids2 = "shippingAddrs";
                                         
                                         inputTag.className = "input-details-info";
                                         inputTag.placeholder = placeholders[index-1];
-
+                                        inputTag.required = true;
                                         divTag.appendChild(inputTag);
                                         // input tag end
                                         inputTag.classList.add(`input-details-info-half-width`);
                                     }
                                     
-                                    // divTag.classList.add("info-wrapper-half-width")
                                     divTag.classList.add(`info-wrapper-half-width`)
-                                    // inputTag.classList.add("input-details-info-half-width");
                     
                                 outerDivtag.appendChild(divTag);
                             
@@ -160,10 +156,8 @@ let ids2 = "shippingAddrs";
                     }
     
     
-                // divId.appendChild(outerDivtag);
         divId.appendChild(twoDivContainer);
-            
-            
+                      
     }
 
 
@@ -219,7 +213,6 @@ let shoppingCart = (productName, actualPrice, oldPrice, quantityArray, chargesDe
                 let quantityDiv = document.createElement("div")
                 quantityDiv.className = "qantity"
 
-                    // let quantitySpanTag;
                     for (let index = 0; index < 3; index++) {
                     
                         let quantitySpanTag = document.createElement("span");
@@ -276,3 +269,10 @@ let actualCharges = ["$19", "$148.98"];
 
 
 shoppingCart(productNamevalues, actualPricevalues, oldPricevalues, quantityArrayvalues, chargesDesc, actualCharges)
+
+let alertOnClick = () =>{
+    let a = document.getElementById("form");
+    if (a.checkValidity()) {
+        alert("Transaction Successful");
+    }
+}
