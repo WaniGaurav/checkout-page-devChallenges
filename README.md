@@ -38,6 +38,7 @@
 
 ![screenshots1](https://github.com/WaniGaurav/checkout-page-devChallenges/assets/25397564/9913ae6f-3093-40a3-bbb7-d17acdfa7569)
 ![screenshots2](https://github.com/WaniGaurav/checkout-page-devChallenges/assets/25397564/cbcf0288-21b0-4385-bc89-5da7d74c0c34)
+![screenshots3](https://github.com/WaniGaurav/checkout-page-devChallenges/assets/25397564/4dc5083b-2dca-4645-ad45-a961ba7033f5)
 
 ### Built With
 
@@ -78,4 +79,4 @@ $ npm start
 ## Contact
 
 - Website [your-website.com](https://checkout-page-devchallenges-gw.netlify.app/)
-- GitHub [@your-username](https://github.com/WaniGaurav/checkout-page-devChallenges)
+- GitHub [@WaniGaurav](https://github.com/WaniGaurav/checkout-page-devChallenges)
