@@ -83,7 +83,7 @@
         --fs-chk-txt:0.625rem;
 
         --padding-label-txt:0.327rem;
-        --padding-bottom-title:3.226rem;
+        --padding-bottom-title:1.226rem;
         --padding-bottom-checkout-details:0.699rem;
         --padding-top-checkout-details:2.815rem;
         --padding-left-info-wrapper:0.734rem;
@@ -118,7 +118,7 @@
         --input-details-info-width:7.323rem;
         --input-details-info-height:0.939rem;
         --btn-yellow-width:11.4rem;
-        --btn-yellow-div-width:23.5rem;
+        --btn-yellow-div-width:22.8rem;
         --cartImage-width:7.672rem;
         --cartImage-height:7.79rem;
         --qantity-width:7.675rem;
@@ -511,7 +511,7 @@ input[type="number"]::-webkit-inner-spin-button{
         width: 22.7rem;
     }
     .cart-grid {
-        padding-top: 0;
+        padding-top: 2rem;
         margin-top: 0;
         width:21.875rem;
         justify-content: center;
