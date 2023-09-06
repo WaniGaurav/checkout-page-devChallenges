@@ -62,7 +62,7 @@
     --qantity-height:3.25rem;
     --symbol-background-width:1.325rem;
     --symbol-background-height:1.325rem;
-    --charges-width:18.438rem;
+    --charges-width:19.438rem;
     --chkbox-width:1.313rem;
     --chkbox-height:1.313rem;
 
@@ -96,16 +96,16 @@
         --footer-padding:2.75rem;
         
         --margin-right-chkbox:0.486rem;
-        --margin-symbol-design-kybrd-down-arrow-left:0.833rem;
+        --margin-symbol-design-kybrd-down-arrow-left:0.7rem;
         --margin-top-qantity:1.01rem;
 
-        --user-info-width:23.828rem;
+        --user-info-width:22.7rem;
         --user-info-height:3.569rem;
         --user-info4-info5-width:11.186rem;
         --user-info4-info5-height:3.569rem;
-        --info-wrapper-width:22.828rem;
+        --info-wrapper-width:21.8rem;
         --info-wrapper-height:2.535rem;
-        --info-wrapper-half-width-width:10.186rem;
+        --info-wrapper-half-width-width:9.8rem;
         --info-wrapper-half-width-height:2.535rem;
         --input-details-info-half-width-width:5.351rem;
         --input-details-info-half-width-height:0.939rem;
@@ -114,7 +114,7 @@
         --symbol-design-kybrd-down-arrow-left-width:0.938rem;
         --symbol-design-kybrd-down-arrow-left-height:0.938rem;
         --countryClass-width:5.351rem;
-        --countryClass-height:0.939rem;
+        --countryClass-height:1.939rem;
         --input-details-info-width:7.323rem;
         --input-details-info-height:0.939rem;
         --btn-yellow-width:11.4rem;
@@ -125,7 +125,7 @@
         --qantity-height:3.116rem;
         --symbol-background-width:1.212rem;
         --symbol-background-height:1.212rem;
-        --charges-width:16.5rem;
+        --charges-width:18.5rem;
         --chkbox-width:1rem;
         --chkbox-height:0.938rem;
 
@@ -159,6 +159,7 @@
     padding-bottom: var(--padding-bottom-title);
     color: #4E5150;
 }
+
 .checkout-details{
     font-family: Montserrat;
     font-size: var(--fs-checkout-details);
@@ -340,7 +341,8 @@ input[type="number"]::-webkit-inner-spin-button{
 .cart-grid{
     padding-top: 1.916rem;
     display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    /* grid-template-columns: repeat(2 , 1fr); */
+    grid-template-columns: 1fr, 1fr;
     align-items: end;
     gap: 1.325rem;
     margin-top: 5.029rem;
@@ -429,7 +431,8 @@ input[type="number"]::-webkit-inner-spin-button{
     grid-column: 1 / span 2;
 }
 .hr-line{
-    border: 1px solid #BDBDBD
+    border-width: 21.875rem;
+    border: 1px solid #BDBDBD;
 }
 .charges-content{
     display: flex;
@@ -492,11 +495,25 @@ input[type="number"]::-webkit-inner-spin-button{
     .container{
         width: min(100%, 375px);
     }
+    form{
+        width: 350px;
+    }
     .container-wrapper{
         flex-direction: column-reverse;
+    }
+    .material-symbols-outlined {
+        font-size: 18px;
+    }
+    .info-wrapper span {
+        margin-right: 0.6rem;
+    }
+    .divContainer{
+        width: 22.7rem;
     }
     .cart-grid {
         padding-top: 0;
         margin-top: 0;
+        width:21.875rem;
+        justify-content: center;
     }
 }
